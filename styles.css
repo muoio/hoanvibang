@@ -10,3 +10,10 @@
     padding: 1rem 1rem;
     vertical-align: middle;
 }
+#encryptText{
+    width: 500px;
+    height: 200px;
+}
+input{
+    display: block;
+}

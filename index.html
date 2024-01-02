@@ -86,9 +86,10 @@
         tham.bruteKeyLength();
     }
 
-
-
-   
+    encryptText.value = localStorage.encryptText;
+    encryptText.addEventListener('input', function(){
+      localStorage.encryptText = encryptText.value;
+    })
 
     class thammaBang{
       constructor(text, depth, minKeyLength1, maxKeyLength1){
@@ -123,8 +124,12 @@
       }
       
       createButton(text){
-        let btnResult = document.createElement("button");
-        btnResult.innerText = text;
+        let btnResult = document.createElement("input");
+        btnResult.value = text;
+        btnResult.style.width = '100%';
+        btnResult.style.marginTop = '10px';
+        btnResult.style.fontSize = 'large'
+        btnResult.disabled = true;
         return btnResult;
       }
 
